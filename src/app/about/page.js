@@ -8,7 +8,7 @@ export default function About() {
       <div className="text-center">
         <h1 className="text-5xl font-bold text-blue-300 mb-3">About Me</h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          I am currently a Junior at UIowa where I enjoy playing the piano, learning japanese, and lifting weights. Aside from that, here are some cool things I've been a part of.
+          I am currently a Junior at UIowa where I enjoy playing the piano, learning Japanese, and lifting weights. Aside from that, here are some cool things I&apos;ve been a part of.
         </p>
       </div>
 
