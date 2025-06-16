@@ -1,6 +1,5 @@
 import './globals.css';
 import Link from 'next/link';
-import Starfield from './components/Starfield'; // make sure this path is correct
 
 export const metadata = {
   title: 'Will Parker',
@@ -11,8 +10,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="dark bg-animated-gradient text-white scroll-smooth font-sans relative overflow-x-hidden">
-        {/* Animated Starfield Background */}
-        <Starfield />
 
         {/* Navbar */}
         <header className="relative z-10 bg-gray-900/90 backdrop-blur-md shadow sticky top-0 z-50">
