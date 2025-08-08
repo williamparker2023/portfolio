@@ -2,18 +2,27 @@ import Image from 'next/image';
 
 const projects = [
   {
+    title: 'FizzBuzz Social Network',
+    description:
+      'A full-stack Next.js + Supabase social platform for tech discussions. Features GitHub OAuth, infinite scroll, image uploads (≤5 MB) and CI/CD on Vercel. 120+ users and 100+ visitors.',
+    image: '/images/fb.PNG', // add this image to /public/images
+  },
+  {
     title: 'Kanji Character Detector',
-    description: 'A full-stack web app where users draw a kanji, and a PyTorch CNN trained on 140k+ samples predicts the top 10 characters. Built with Flask, PyTorch, and deployed with Docker.',
+    description:
+      'Users draw a kanji; a PyTorch CNN (trained on 140 k samples) predicts the top 10 characters. Flask backend, Canvas API frontend, Docker-deployable.',
     image: '/images/Kanji.png',
   },
   {
     title: 'Monthly Forecasht',
-    description: 'A React + TensorFlow LSTM-powered dashboard that forecasts index fund performance and trends. Includes visualizations and backend data pipelines.',
+    description:
+      'React + TensorFlow LSTM dashboard forecasting index-fund trends with interactive visualizations and automated data pipelines.',
     image: '/images/forecasht.png',
   },
   {
     title: 'Sorting Algorithm Visualizer',
-    description: 'A responsive, interactive React application that helps users understand how sorting algorithms work by animating them in real time with user controls.',
+    description:
+      'Interactive React app that animates sorting algorithms in real time, helping users understand algorithmic behavior.',
     image: '/images/algovispic.png',
   },
 ];
@@ -34,7 +43,7 @@ export default function Projects() {
               alt={proj.title}
               fill
               className="object-cover"
-              priority
+              priority={i === 0}
             />
           </div>
 
