@@ -2,28 +2,24 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: 'FizzBuzz Social Network',
+    title: 'Parallel Electrostatics Simulation Engine',
     description:
-      'A full-stack Next.js + Supabase social platform for tech discussions. Features GitHub OAuth, infinite scroll, image uploads (≤5 MB) and CI/CD on Vercel. 120+ users and 100+ visitors.',
-    image: '/images/fb.PNG', // add this image to /public/images
+      'A real-time C++/SFML electrostatics engine supporting 5,000+ interacting particles. Replaced O(n²) all-pairs force calculations with an O(n log n) Barnes–Hut quad-tree and multi-threading, reducing a 200-step benchmark from 7.63 s to 0.75 s (10.2× speedup).',
+    link: 'https://github.com/williamparker2023/ElectroSim',
+    image: '/images/EMPicture.png',
   },
   {
-    title: 'Kanji Character Detector',
+    title: 'Kanji Sketch Recognizer',
     description:
-      'Users draw a kanji; a PyTorch CNN (trained on 140 k samples) predicts the top 10 characters. Flask backend, Canvas API frontend, Docker-deployable.',
+      'A PyTorch CNN trained on 140K 64×64 Kanji images across 3,832 classes, achieving 93% top-10 accuracy. A Flask backend and Canvas API frontend serve the top 10 predicted characters with English meanings in under 200 ms.',
+    link: 'https://github.com/williamparker2023/KanjiPytorch',
     image: '/images/Kanji.png',
   },
   {
-    title: 'Monthly Forecasht',
+    title: 'FizzBuzz Social Network',
     description:
-      'React + TensorFlow LSTM dashboard forecasting index-fund trends with interactive visualizations and automated data pipelines.',
-    image: '/images/forecasht.png',
-  },
-  {
-    title: 'Sorting Algorithm Visualizer',
-    description:
-      'Interactive React app that animates sorting algorithms in real time, helping users understand algorithmic behavior.',
-    image: '/images/algovispic.png',
+      'A full-stack Next.js and Supabase social platform for tech discussions with GitHub OAuth, infinite scroll, image uploads, and CI/CD on Vercel. Reached 120+ users and 100+ visitors.',
+    image: '/images/fb.PNG',
   },
 ];
 
@@ -48,7 +44,13 @@ export default function Projects() {
           </div>
 
           <div className="flex-1">
-            <h2 className="text-3xl font-bold text-blue-300">{proj.title}</h2>
+            <h2 className="text-3xl font-bold text-blue-300">
+              {proj.link ? (
+                <a href={proj.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition">
+                  {proj.title}
+                </a>
+              ) : proj.title}
+            </h2>
             <p className="text-gray-300 text-lg mt-4">{proj.description}</p>
           </div>
         </div>

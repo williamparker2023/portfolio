@@ -18,7 +18,6 @@ export default function About() {
         <h2 className="text-4xl font-semibold text-blue-400 mb-6 text-center">Experience</h2>
         <div className="space-y-10">
 
-          {/* John Deere (updated) */}
           <div className="bg-gray-900 rounded-xl shadow-lg border border-blue-800 p-8 flex flex-col md:flex-row gap-8 items-start">
             <Image
               src="/images/JD.png"
@@ -30,13 +29,34 @@ export default function About() {
             <div className="flex-1">
               <h3 className="text-3xl font-bold" style={{ color: '#367C2B' }}>John Deere</h3>
               <p className="text-gray-400 text-md italic">
-                Software Engineering Intern · Summer&nbsp;2025 · Chicago, IL
+                Software Engineering Intern · May&nbsp;2026 – Aug&nbsp;2026 · Des Moines, IA
               </p>
               <ul className="list-disc pl-5 mt-4 text-gray-300 text-lg space-y-2">
-                <li>Refactored 120+ JSON configs into YAML + Jinja templates, removing 4 000+ LOC and boosting maintainability.</li>
-                <li>Cut Databricks deploys from 30 min to 3 min (-90%) by caching job IDs in AWS S3 and eliminating redundant API calls.</li>
-                <li>Built a Python data-integrity checker that surfaced 2 000+ record mismatches between staging and prod datasets.</li>
-                <li>Pruned obsolete API calls in the CI/CD pipeline, reducing overall deployment time by 40%.</li>
+                <li>Designed a serverless AWS pipeline processing 2M+ events daily by integrating EventBridge, SQS, Lambda, and DynamoDB.</li>
+                <li>Increased supported data capacity 16×, from 2,900 to 46,000+ records per entity, by redesigning a constrained DynamoDB schema.</li>
+                <li>Increased supported artifact size 20×, from 100 MB to 2+ GB, by streaming ZIP archives directly to Amazon S3.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gray-900 rounded-xl shadow-lg border border-blue-800 p-8 flex flex-col md:flex-row gap-8 items-start">
+            <Image
+              src="/images/JD.png"
+              alt="John Deere"
+              width={100}
+              height={100}
+              className="rounded-lg shadow-md object-contain"
+            />
+            <div className="flex-1">
+              <h3 className="text-3xl font-bold" style={{ color: '#367C2B' }}>John Deere</h3>
+              <p className="text-gray-400 text-md italic">
+                Software Engineering Intern · Jun&nbsp;2025 – Aug&nbsp;2025 · Chicago, IL
+              </p>
+              <ul className="list-disc pl-5 mt-4 text-gray-300 text-lg space-y-2">
+                <li>Replaced 120+ static JSON files with YAML and Jinja configuration templates, cutting 4,000+ lines of code.</li>
+                <li>Reduced Databricks deployment time from 30 minutes to 3 minutes by caching job IDs in Amazon S3.</li>
+                <li>Wrote a Python data-integrity script that surfaced 2,000+ record mismatches and documented long-term quality fixes.</li>
+                <li>Reduced deployment time 40% by pruning redundant Docker bootups from the CI/CD pipeline.</li>
               </ul>
             </div>
           </div>
@@ -53,12 +73,11 @@ export default function About() {
             <div className="flex-1">
               <h3 className="text-3xl font-bold text-blue-300">Mobile Track Solutions</h3>
               <p className="text-gray-400 text-md italic">
-                Software Engineering Intern · Summer&nbsp;2024 · Elkader, IA
+                Software Engineering Intern · Jun&nbsp;2024 – Aug&nbsp;2024 · Elkader, IA
               </p>
               <ul className="list-disc pl-5 mt-4 text-gray-300 text-lg space-y-2">
-                <li>Built a Django/PostgreSQL web app to manage and serve company product data.</li>
-                <li>Added analytics dashboards that increased internal adoption and sales.</li>
-                <li>Led feature meetings and implemented custom user-requested improvements.</li>
+                <li>Built a Django/PostgreSQL analytics platform centralizing product spreadsheet data for 25+ employees and 100+ dealers.</li>
+                <li>Enabled users to query and analyze thousands of products from one shared platform.</li>
               </ul>
             </div>
           </div>
